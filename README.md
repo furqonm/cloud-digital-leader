@@ -8,15 +8,11 @@ _[DISCLAIMER] Links dan materials yang ada disini dipergunakan untuk tambahan ma
 
     > Video material dari Andrew Brown (ExamPro) di freecodecamp. Silahkan dipelajari untuk memperkuat konsep dasar Google Cloud, dimana materi ini cocok untuk pemula dan terdapat beberapa demo yang ditampilkan.
 
-[Google Cloud Associate Cloud Engineer Course - Pass the Exam!](https://www.youtube.com/watch?v=jpno8FSqpc8)
-
-
-### 3. Exam Guide
+### 2. Exam Guide
 - [Cloud Digital Leader: Certification Exam Guide](https://cloud.google.com/certification/guides/cloud-digital-leader)
 
-    > Membahas 4 domain/section yang akan ditanyakan diujian. Bisa dicek beberapa poin mana yang tidak dimengerti untuk dipelajari lebih lanjut.
-
-### 4. Exam Readiness
+    > Membahas 4 domain/section yang akan ditanyakan diujian. Bisa dicek beberapa poin mana yang tidak dimengerti untuk dipelajari lebih lanjut.2
+### 3. Exam Readiness
 - [Cloud Digital Leader Sample Questions](https://docs.google.com/forms/d/e/1FAIpQLSedAmf77MGS7FGEaylFzY51KtBd7kkIZJIMDsV5zSRSmpKIOA/viewform)
 
     > Simulasi ujian via Google Forms untuk mengenali format pertanyaan ujian GCP CDL nanti.
