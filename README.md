@@ -14,8 +14,8 @@ _[DISCLAIMER] Links dan materials yang ada disini dipergunakan untuk tambahan ma
     > Membahas 4 domain/section yang akan ditanyakan diujian. Bisa dicek beberapa poin mana yang tidak dimengerti untuk dipelajari lebih lanjut.
 
 ### 3. Exam Readiness
-- [Google Cloud Digital Leader Certification Exam Questions](https://docs.google.com/forms/d/e/1FAIpQLSc5NsQ_l4Ita52Cr2HqhRLHtqfbmeVd8mXGoDYxmSJdbG2IUw/viewform) **(Unofficial)**
 - [Cloud Digital Leader Sample Questions](https://docs.google.com/forms/d/e/1FAIpQLSedAmf77MGS7FGEaylFzY51KtBd7kkIZJIMDsV5zSRSmpKIOA/viewform)
+- [Google Cloud Digital Leader Certification Example Questions](https://docs.google.com/forms/d/e/1FAIpQLSc5NsQ_l4Ita52Cr2HqhRLHtqfbmeVd8mXGoDYxmSJdbG2IUw/viewform) **(Unofficial)**
 
     > Simulasi ujian via Google Forms untuk mengenali format pertanyaan ujian GCP CDL nanti.
 
