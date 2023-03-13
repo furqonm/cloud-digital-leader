@@ -16,19 +16,18 @@ App Engine
 - Developer tinggal upload source code --> App Engine
 - Only support HTTP/S --> untuk website
 - Serverless, no manage server
-- Support sebagian progamming language, tidak banyak pilihan
-Ada dua mode
-- Standard menggunakan sandbox --> bisa dimatikan otomatis, scale down to 0
-- Flex menggunakan container --> minimum 1 VM yg jalan, tapi dia support banyak bahasa pemrograman
+Memiliki dua mode:
+- Standard menggunakan sandbox --> Scale down to 0 artinya bisa dimatikan otomatis, tapi support sebagian bahasa pemograman.
+- Flex menggunakan container --> Minimum 1 VM yg jalan, tapi support banyak bahasa pemrograman
 
 Cloud Run
 =================
 - Cocok untuk microservice, website, simple app
-- Only support HTTP/S --> untuk website
-- Developer tinggal upload container image dan tentukan jumlah container yg jalan --> Cloud Run
-- Serverless, no manage server
-- Scale down to 0
-- Support almost all programming language
+- Only support HTTP/S --> untuk website.
+- Developer tinggal upload container image dan tentukan jumlah container yg jalan --> Cloud Run.
+- Serverless, no manage server.
+- Scale down to 0 artinya bisa dimatikan otomatis.
+- Support almost all programming language.
 
 
 Google Kubenertes Engine
