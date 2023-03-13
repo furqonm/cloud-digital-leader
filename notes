@@ -1,0 +1,155 @@
+****************************
+	COMPUTE OPTION
+****************************
+
+Compute Engine -- IaaS
+=================
+- Update/patch dan instalasi kita yang bertanggung jawab.
+- Flexible untuk kustomisasi OS, dan aplikasi yg kita install.
+- VM yg sudah diinstall OS. Bisa kita gunakan Windows dan Linux (sebagian ada yg premium/berbayar).
+- Bagaimana kalau kita punya Windows license? Caranya migrasi VM + OS + license ke Google ---> VM disk upload ke Cloud Storage lalu import (Bring Your Own License).
+
+
+App Engine
+=================
+- Cocok untuk Website, mobile, simple app
+- Developer tinggal upload source code --> App Engine
+- Only support HTTP/S --> untuk website
+- Serverless, no manage server
+- Support sebagian progamming language, tidak banyak pilihan
+Ada dua mode
+- Standard menggunakan sandbox --> bisa dimatikan otomatis, scale down to 0
+- Flex menggunakan container --> minimum 1 VM yg jalan, tapi dia support banyak bahasa pemrograman
+
+Cloud Run
+=================
+- Cocok untuk microservice, website, simple app
+- Only support HTTP/S --> untuk website
+- Developer tinggal upload container image dan tentukan jumlah container yg jalan --> Cloud Run
+- Serverless, no manage server
+- Scale down to 0
+- Support almost all programming language
+
+
+Google Kubenertes Engine
+=================
+- Developer --> upload container image --> Google Kubernetes Engine pakai file YALM atau command line (repot)
+- Cluster kubernetes = Control plane (mengatur operasional) dan Worker node (ngejalanin container)
+- Microservice, support untuk protokol HTTP/S dan protokol lainnya seperti UDP.
+- Specific requirment in security and network
+- Manage cluster
+--> Mengatur interaksi antar container.
+--> Menentukan konfigurasi container yg jalan dari auto scaling, storage, dll.
+--> Mengatur akses jika container mau diakses dari luar.
+No scale down to 0 dan harus bayar untuk Control Plane.
+
+
+****************************
+	 STORAGE for VM
+****************************
+
+Local SSD
+=================
+- Didalam server/internal seperti SSD didalam laptop/PC kita.
+- High performance.
+- Data bisa hilang ketika VM-nya direstart atau dimatikan.
+- Baikemporary, windows pagefile, atau linux swap filesystem
+
+Persistent Disk
+=================
+- diluar server ada perangkat untuk storage (SAN storage)
+- low to medium performance
+- datanya tidak bisa hilang
+- OS, data
+
+FileStore
+=================
+- semacam server yg menshare data-data (NAS Storage)
+- kita mau share file-file kita ke beberapa VM
+
+==================          ==============
+= VM1   VM2  VM3 =          = PD Storage = 
+= Local SDD      = -------> =            =
+==================          ==============
+Server				Server/perangkat khusus yg menshare storage
+
+
+
+****************************
+	    STORAGE
+****************************
+
+Cloud Storage
+=================
+- Static content seperti video, gambar, dokumen.
+- Bisa akses via URL.
+- Versioning = Supaya file yg kita simpan tidak replace kalau namanya sama, atau kita bisa simpan versi file yg lama.
+- Lifecyce Management = Delete file kalau sudah 1 thn atau waktu yg kita tentukan, memindahkan file dari storageclass satu ke yg lain.
+
+
+Cloud SQL
+=================
+- Database relational (TB) artinya ada relasi antar table misalkan data customer dengan data transaksi pembelian di E-Commerce.
+- Transactional database.
+- Bahasa SQL untuk akses dan olah datanya.
+- Support MySQL, Postgre SQL dan Ms. SQL Server (sudah include license).
+- Low to medium performance.
+- Cocok untuk ERP, local app, CRM.
+- Location regional (user hanya disatu negara).
+
+Spanner
+=================
+- Database relational (PB).
+- Transactional database.
+- Bahasa SQL untuk akses dan olah datanya.
+- Medium to high performance.
+- Cocok untuk bank/finance, e-commerce.
+- Global access (usernya di beberapa negara, multi region)
+
+FireStore
+=================
+- Database non-relational (TB) artinya nggak pake SQL dan relasi antar table. Bentuk datanya biasanya dokumen.
+- Transactional database
+- Cocok untuk mobile apps, web apps
+
+Big Query
+=================
+- Datawarehouse (PB).
+- Menggunakan bahasa SQL.
+- Cocok untuk analytic database bukan transactional, generate report.
+
+BigTable
+=================
+- Database non-relational (PB).
+- Akses cepat/low latence.
+- Massive read or write.
+- Cocok untuk ML, IoT, HBase, data time series.
+
+****************************
+Virtual Private Cloud (VPC) --> Virtual Network untuk VM
+****************************
+Koneksi
+=================
+VPC <--> VPC = VPC Peering
+VPC <--> Cloud Provider yg lain = Cloud VPN
+VPC <--> DC = Cloud VPN (jalur terenkripsi via internet) atau Cloud Interconnect (koneksi fiber)
+Cloud VPN = 3 Gbps
+Cloud Interconnect = Dedicated 100/10/1 Gbps (harus taruh router di Colocation DC di DCI/NTT), Partner 1 Gbps atau dibawahnya
+
+-------------------------------
+Identity Access and Management
+-------------------------------
+Member
+- Gmail account (pribadi)
+- Workspace/Gsuite account (enterprise dan dapat akses produk-produk Google seperti Mail, Meet, Calendar, dll)
+- Cloud Identity (enterprise tapi tidak dapat akses produk-produk Google seperti Workspace)
+- Service account (app --> service Google)
+
+
+****************************
+	    PRICING
+****************************
+- Per-second billing --> Kita bayar yg kita pakai per detik.
+- Commited use --> Subscribe selama 1 thn/3 thn, dimana kita dapat diskon karena langganan.
+- Preemptible --> resource yang dilelang dengan harga murah, Google bisa terminate kapanpun. Umurnya hanya sampai 1 hari. Cocok untuk backend processing bukan untuk website.
+- Spot VM --> sama seperti preemptible tapi dia bisa lebih dari satu hari.
