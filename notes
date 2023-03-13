@@ -4,11 +4,10 @@
 
 Compute Engine -- IaaS
 =================
-- Update/patch dan instalasi kita yang bertanggung jawab.
-- Flexible untuk kustomisasi OS, dan aplikasi yg kita install.
 - VM yg sudah diinstall OS. Bisa kita gunakan Windows dan Linux (sebagian ada yg premium/berbayar).
+- User yang bertanggung jawab untuk update/patch dan instalasi aplikasi.
+- Flexible untuk kustomisasi OS, dan jenis aplikasi yang akan kita install.
 - Bagaimana kalau kita punya Windows license? Caranya migrasi VM + OS + license ke Google ---> VM disk upload ke Cloud Storage lalu import (Bring Your Own License).
-
 
 App Engine
 =================
@@ -32,15 +31,14 @@ Cloud Run
 
 Google Kubenertes Engine
 =================
+- Cocok untuk microservice, support untuk protokol HTTP/S dan lainnya seperti UDP, memiliki requirement spesifik di security dan network.
 - Developer --> upload container image --> Google Kubernetes Engine pakai file YALM atau command line (repot)
 - Cluster kubernetes = Control plane (mengatur operasional) dan Worker node (ngejalanin container)
-- Microservice, support untuk protokol HTTP/S dan protokol lainnya seperti UDP.
-- Specific requirment in security and network
 - Manage cluster
 --> Mengatur interaksi antar container.
 --> Menentukan konfigurasi container yg jalan dari auto scaling, storage, dll.
 --> Mengatur akses jika container mau diakses dari luar.
-No scale down to 0 dan harus bayar untuk Control Plane.
+- No scale down to 0 dan harus bayar untuk Control Plane.
 
 
 ****************************
@@ -52,19 +50,19 @@ Local SSD
 - Didalam server/internal seperti SSD didalam laptop/PC kita.
 - High performance.
 - Data bisa hilang ketika VM-nya direstart atau dimatikan.
-- Baikemporary, windows pagefile, atau linux swap filesystem
+- Cocok untuk temporary, windows pagefile, atau linux swap filesystem
 
 Persistent Disk
 =================
-- diluar server ada perangkat untuk storage (SAN storage)
-- low to medium performance
-- datanya tidak bisa hilang
-- OS, data
+- Diluar server ada perangkat untuk storage (SAN storage).
+- Low to medium performance.
+- Datanya tidak bisa hilang meski direstart atau dimatikan.
+- Cocok untuk penyimpanan OS (seperti volume C di Windows), atau data (seperti volume D di Windows).
 
 FileStore
 =================
-- semacam server yg menshare data-data (NAS Storage)
-- kita mau share file-file kita ke beberapa VM
+- Server khusus yang digunakan untuk menshare data-data (NAS Storage). Ini seperti folder yang dishare di Windows secara lokal.
+- Cocok untuk share file-file ke beberapa VM sekaligus, tidak Persistent Disk by default.
 
 ==================          ==============
 = VM1   VM2  VM3 =          = PD Storage = 
@@ -135,15 +133,14 @@ VPC <--> DC = Cloud VPN (jalur terenkripsi via internet) atau Cloud Interconnect
 Cloud VPN = 3 Gbps
 Cloud Interconnect = Dedicated 100/10/1 Gbps (harus taruh router di Colocation DC di DCI/NTT), Partner 1 Gbps atau dibawahnya
 
--------------------------------
+****************************
 Identity Access and Management
--------------------------------
+****************************
 Member
 - Gmail account (pribadi)
 - Workspace/Gsuite account (enterprise dan dapat akses produk-produk Google seperti Mail, Meet, Calendar, dll)
 - Cloud Identity (enterprise tapi tidak dapat akses produk-produk Google seperti Workspace)
 - Service account (app --> service Google)
-
 
 ****************************
 	    PRICING
