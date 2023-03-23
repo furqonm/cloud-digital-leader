@@ -15,7 +15,7 @@ _[DISCLAIMER] Links dan materials yang ada disini dipergunakan untuk tambahan ma
 
 ### 3. Exam Readiness
 - [Cloud Digital Leader Sample Questions](https://docs.google.com/forms/d/e/1FAIpQLSedAmf77MGS7FGEaylFzY51KtBd7kkIZJIMDsV5zSRSmpKIOA/viewform)
-- [Google Cloud Digital Leader Certification Example Questions](https://docs.google.com/forms/d/e/1FAIpQLSc5NsQ_l4Ita52Cr2HqhRLHtqfbmeVd8mXGoDYxmSJdbG2IUw/viewform) **(Unofficial)**
+- [Google Cloud Digital Leader Certification Example Questions](https://docs.google.com/forms/d/e/1FAIpQLScY6YWJdTO4WwxPaxXc2uTot-9X1vtkzvsOjIVccd2rSyOV0A/viewform) **(Unofficial)**
 
     > Simulasi ujian via Google Forms untuk mengenali format pertanyaan ujian GCP CDL nanti.
 
